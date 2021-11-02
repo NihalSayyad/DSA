@@ -24,6 +24,10 @@ def binary_search_recursive(myList, target, left_index, right_index):
         return -1
 
     mid_index = (left_index + right_index) // 2
+
+    if mid_index >= len(myList) or mid_index < 0:
+        return -1
+
     mid_number = myList[mid_index]
 
     if mid_number == target:
