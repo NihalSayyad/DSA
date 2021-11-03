@@ -19,6 +19,7 @@ def binary_search(myList, target):
 
     return -1
 
+#recursive call
 def binary_search_recursive(myList, target, left_index, right_index):
     if left_index > right_index:
         return -1
