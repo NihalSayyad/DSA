@@ -1,28 +1,51 @@
-#Merge Sort
+def merge_sort(arr):
+    if len(arr) <= 1:
+        return
 
-def merge_two_sorted_arrays(a, b):
-    n = len(a)
-    m = len(b)
-    i = j = 0
-    c =[]
-    while i<n and j< m:
-        if a[i] < b[j]:
-            c.append(a[i])
-            i += 1
+    mid = len(arr)//2
+
+    left = arr[:mid]
+    right = arr[mid:]
+
+    merge_sort(left)
+    merge_sort(right)
+
+    merge_two_sorted_lists(left, right, arr)
+
+def merge_two_sorted_lists(a,b,arr):
+    len_a = len(a)
+    len_b = len(b)
+
+    i = j = k = 0
+
+    while i < len_a and j < len_b:
+        if a[i] <= b[j]:
+            arr[k] = a[i]
+            i+=1
         else:
-            c.append(b[j])
-            j += 1
+            arr[k] = b[j]
+            j+=1
+        k+=1
 
-    while i < n:
-        c.append(a[i])
-        i += 1
-    while j < m:
-        c.append(b[j])
-        j += 1
-    return c
+    while i < len_a:
+        arr[k] = a[i]
+        i+=1
+        k+=1
+
+    while j < len_b:
+        arr[k] = b[j]
+        j+=1
+        k+=1
 
 if __name__ == '__main__':
-    a = [5,8,12,56]
-    b = [7,9,45,51]
+    test_cases = [
+        [10, 3, 15, 7, 8, 23, 98, 29],
+        [],
+        [3],
+        [9,8,7,2],
+        [1,2,3,4,5]
+    ]
 
-    print(merge_two_sorted_arrays(a,b))
+    for arr in test_cases:
+        merge_sort(arr)
+        print(arr)
