@@ -1,7 +1,7 @@
 #Partition
 
 def partition(low, high, arr):
-    pivot = arr[low]
+    pivot = arr[low] #Selecting first element as pivot can lead to O(n^2)
     i = low
     j = high
     while i < j:
