@@ -1,4 +1,4 @@
-# Left rotate array by 1 position.
+# Left rotate array by 1 position
 
 def left_rotate_by_one(arr):
     len_arr = len(arr)
