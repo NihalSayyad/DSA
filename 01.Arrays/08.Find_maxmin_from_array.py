@@ -30,7 +30,7 @@ def getMinMax(low, high, arr):
 
 
 # Driver code
-arr = [1000, 11, 445, 1, 330, 3000]
+arr = [1000, 11, 445, 1, 330, 3000, 40]
 high = len(arr) - 1
 low = 0
 arr_max, arr_min = getMinMax(low, high, arr)
