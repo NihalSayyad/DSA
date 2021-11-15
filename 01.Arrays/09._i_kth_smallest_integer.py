@@ -1,3 +1,8 @@
+'''
+MinHeap approach.. complexity O(n.log n)
+                    extra space to store the mean heap O(n)
+'''
+
 from heapq import heappush, heappop, heapify
 
 def KthSmallest(arr, k):
