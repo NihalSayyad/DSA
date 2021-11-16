@@ -1,5 +1,7 @@
 '''
 https://www.geeksforgeeks.org/array-rotation/
+Extra space will be required to store the d elements.
+Time Complexity --> O(n)
 '''
 
 def ArrayRotation(arr, d):
