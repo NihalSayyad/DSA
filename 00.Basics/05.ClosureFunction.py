@@ -5,7 +5,10 @@ def outerFunction(text):
         # Accessing outer variable
         print(text)
 
-    innerFunction()
+    return innerFunction
 
 if __name__ == '__main__':
-    outerFunction('Hey!')
+    myFunction = outerFunction('Hey!')
+    myFunction()
+    myFunction()
+    myFunction()
