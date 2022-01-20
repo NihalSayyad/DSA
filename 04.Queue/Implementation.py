@@ -14,6 +14,9 @@ class Queue:
     def is_empty(self):
         return len(self.buffer) == 0
 
+    def front(self):
+        return self.buffer[-1]
+
 if __name__ == '__main__':
     pq = Queue()
     pq.enqueue({
