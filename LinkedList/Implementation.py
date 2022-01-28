@@ -40,7 +40,7 @@ if __name__ == '__main__':
     ll = LinkedList()
     ll.insert_at_begining(5)
     ll.insert_at_begining(80)
-    ll.print_list()
+    ll.print_list() 
 
     ll.insert_at_end(70)
     ll.insert_at_end(90)
