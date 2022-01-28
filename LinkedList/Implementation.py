@@ -92,6 +92,20 @@ class LinkedList:
                 break
             itr = itr.next
 
+    def remove_by_value(self, value):
+        if self.head is None:
+            return
+
+        if self.head.data == value:
+            self.head = self.head.next
+
+        itr = self.head
+        while itr.next:
+            if itr.next.data == value:
+                itr.next = itr.next.next
+                break
+            itr = itr.next
+
 if __name__ == '__main__':
     ll = LinkedList()
     ll.insert_values(["banana", "mango", "grapes", "orange",])
@@ -107,4 +121,10 @@ if __name__ == '__main__':
     ll.print_list()
 
     ll.insert_after_value("orange", "pears")
+    ll.print_list()
+
+    ll.remove_by_value("banana")
+    ll.print_list()
+
+    ll.remove_by_value("pears")
     ll.print_list()
