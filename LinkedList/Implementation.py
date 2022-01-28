@@ -41,7 +41,36 @@ class LinkedList:
             itr = itr.next
         print(llstr)
 
-if __name__ == '__main__':
+    def get_length(self):
+        count = 0
+        itr = self.head
+        while itr:
+            count += 1
+            itr = itr.next
 
+        return count
+
+    def remove_at(self, index):
+        if index<0 or index>=self.get_length():
+            raise Exception("Invalid Index")
+
+        if index == 0:
+            self.head = self.head.next
+            return
+
+        count = 0
+        itr = self.head
+        while itr:
+            if count == index - 1:
+                itr.next = itr.next.next
+                break
+            itr = itr.next
+            count += 1
+
+if __name__ == '__main__':
+    ll = LinkedList()
     ll.insert_values([1,2,3,4,5])
+    ll.print_list()
+
+    ll.remove_at(2)
     ll.print_list()
