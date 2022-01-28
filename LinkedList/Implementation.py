@@ -23,6 +23,11 @@ class LinkedList:
 
         itr.next = Node(data, None)
 
+    def insert_values(self, data):
+        self.head = None
+        for i in data:
+            self.insert_at_end(i)
+
     def print_list(self):
         if self.head is None:
             print("List is empty")
@@ -37,12 +42,6 @@ class LinkedList:
         print(llstr)
 
 if __name__ == '__main__':
-    ll = LinkedList()
-    ll.insert_at_begining(5)
-    ll.insert_at_begining(80)
-    ll.print_list() 
 
-    ll.insert_at_end(70)
-    ll.insert_at_end(90)
-    ll.insert_at_end(50)
+    ll.insert_values([1,2,3,4,5])
     ll.print_list()
