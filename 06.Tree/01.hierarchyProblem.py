@@ -49,3 +49,9 @@ def build_product_tree():
 if __name__ == '__main__':
     root = build_product_tree()
     root.print_tree("both")
+
+    print("---------------------------------------")
+    root.print_tree("name")
+
+    print("---------------------------------------")
+    root.print_tree("designation")
