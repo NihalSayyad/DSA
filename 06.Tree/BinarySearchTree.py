@@ -46,6 +46,16 @@ class BinarySearchTreeNode:
 
         return elements
 
+    def post_order_traversal(self):
+        elements = []
+        if self.left:
+            elements += self.left.post_order_traversal()
+        if self.right:
+            elements += self.right.post_order_traversal()
+        elements.append(self.data)
+
+        return elements
+
     def search(self, val):
         if self.data == val:
             return True
@@ -95,3 +105,4 @@ if __name__ == '__main__':
     print(root.calc_sum())
 
     print(root.pre_order_traversal())
+    print(root.post_order_traversal())
