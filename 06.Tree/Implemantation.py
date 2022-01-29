@@ -22,7 +22,7 @@ class TreeNode:
         print(prefix + self.data)
         if self.children:
             for child in self.children:
-                child.print_tree()
+                child.print_tree(Based)
 
 def build_product_tree():
     root = TreeNode("Electronics")
