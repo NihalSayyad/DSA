@@ -4,7 +4,7 @@ class Heap:
 
     def heapify(self):
         size = len(self.arr)
-        for i in range(size-1, -1, -1):
+        for i in range((size//2)-1, -1, -1):
             largest = i
             l = i*2 + 1
             r = i*2 + 2
@@ -32,11 +32,11 @@ class Heap:
         print(self.arr)
 
 if __name__ == '__main__':
-    arr = [4,3,5,7,2,9,10]
+    arr = [1,2,3,4,5]
     heap = Heap()
     for i in arr:
         heap.insert(i)
 
     heap.print_heap()
-    heap.insert(22)
-    heap.print_heap()
+    #heap.insert(22)
+    #heap.print_heap()
