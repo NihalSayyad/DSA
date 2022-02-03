@@ -40,3 +40,8 @@ if __name__ == '__main__':
     heap.print_heap()
     #heap.insert(22)
     #heap.print_heap()
+
+    heap2 = Heap()
+    heap2.arr = [2,2,3,1,5,7,8,10]
+    heap2.heapify()
+    heap2.print_heap()
