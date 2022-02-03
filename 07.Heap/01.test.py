@@ -28,6 +28,16 @@ class Heap:
             self.arr.append(data)
             self.heapify()
 
+    def delete(self):
+        if len(self.arr) == 0:
+            return
+        size = len(self.arr)
+        element = self.arr[0]
+        self.arr[0] = self.arr[size-1]
+        self.arr.pop(size-1)
+        self.heapify()
+        return element
+
     def print_heap(self):
         print(self.arr)
 
@@ -44,4 +54,8 @@ if __name__ == '__main__':
     heap2 = Heap()
     heap2.arr = [2,2,3,1,5,7,8,10]
     heap2.heapify()
+    heap2.print_heap()
+    print(heap2.delete())
+    heap2.print_heap()
+    print(heap2.delete())
     heap2.print_heap()
