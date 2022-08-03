@@ -23,6 +23,8 @@ class Solution:
 
         return min_dist
 
+    hash()
+
 A = [ 7, 1, 3, 4, 1, 7 ]
 sol = Solution()
 
