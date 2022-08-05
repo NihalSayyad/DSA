@@ -8,20 +8,24 @@ class Solution:
         len_A = len(A)
         len_B = len(B)
 
-        while i < len_A:
-            while j < len_B and A[i] == B[j]:
-                j += 1
-            if j >= len_B:
-                break
-            i += 1
-
-        if i != len_A or j != len_B:
+        if A[i] != B[j]:
             return 0
 
+        for j in range(1, len_B):
+            if B[j] != B[j-1]:
+                i += 1
+                if i >= len_A:
+                    return 0
+
+                if A[i] != B[j]:
+                    return 0
+
+        if j != len_B-1 or i != len_A-1:
+            return 0
         return 1
 
 sol = Solution()
 A = "HIRE"
-B = "HIRE"
+B = "HIR"
 
 print(sol.solve(A, B))
